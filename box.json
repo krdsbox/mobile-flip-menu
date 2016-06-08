@@ -3,8 +3,8 @@
 	"description": "Interactive box model flip menu",
 	"author": "Vijay",
 	"author-email": "vijaya.kumar@krds.com",
-	"image": "",
-	"gif": "",
+	"image": "img/packshot.png",
+	"gif": "img/packshot.gif",
 	"tags": "mobile, menu, flip",
 	"repo-url": "https://github.com/krdsbox/mobile-flip-menu"
 }
