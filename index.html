@@ -3,25 +3,62 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Box Starter</title>
+	<title>Mobile Flip Menu</title>
 	<link rel="icon" href="./favicon.png">
 	<link rel="stylesheet" href="style/box.css">
 	<link rel="stylesheet" href="style/main.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">	
+	<link href='https://fonts.googleapis.com/css?family=Raleway:400,500,700' rel='stylesheet' type='text/css'>
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js" crossorigin="anonymous"></script>
 </head>
 <body>
-	<nav class="boxActions">
-		<a href="#" id="previous_box" title="Previous box">
-			<img src="img/back-icon.svg" alt="back" />
-		</a>
-		<a href="#" id="box_home" title="Box home">
-			<img src="img/krdsbox.svg" alt="KRDS Box" />
-		</a>
-		<a href="#" id="github_repo" title="Github repo">
-			<img src="img/github.svg" alt="Github" />
-		</a>
-	</nav>
-	<h1>Box Starter</h1>
-	<p>An optional &amp; minimal starter kit for krdsbox components</p>
+	<div class="mainContainer">
+		<div class="wrap">			
+			<header>
+				<a href="#" class="menuBtn">
+					<span class="lines"></span>
+				</a>
+				<nav class="boxActions">
+					<a href="#" id="previous_box" title="Previous box">
+						<img src="img/back-icon.svg" alt="back" />
+					</a>
+					<a href="#" id="box_home" title="Box home">
+						<img src="img/krdsbox.svg" alt="KRDS Box" />
+					</a>
+					<a href="#" id="github_repo" title="Github repo">
+						<img src="img/github.svg" alt="Github" />
+					</a>
+				</nav>
+			</header>
+			<nav class="mainMenu">
+				<ul>
+					<li class="cls">
+						<a href="#"><i>close</i></a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-adjust"></i><span>Intro</span></a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-server"></i><span>Services</span></a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-smile-o"></i><span>Team</span></a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-usd"></i><span>Pricing</span></a>
+					</li>
+					<li>
+						<a href="#" class="suBtn"><i class="fa fa-hand-o-right"></i><span>Sing Up</span></a>
+					</li>
+				</ul>
+			</nav>
+			<div class="contentBlock">
+				<h2>Mobile Flip Menu</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a aliquam felis, vel pulvinar felis. Nulla massa quam, elementum sed lacinia eu, faucibus at dui. Praesent urna ante, ultrices sed posuere eget, aliquam eu libero. Morbi vitae mi tellus. Ut vel libero euismod, posuere nisi id, rhoncus odio. Curabitur non magna eget dui ultricies commodo ac quis enim. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+			</div>
+		</div>
+	</div>
+	
 	<script src="js/main.js"></script>
 </body>
 </html>
