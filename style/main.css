@@ -1,7 +1,292 @@
-/* your styles here */
+/******** MAIN MENU STYLES START *******/
+/* menu button */
+.menuBtn {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  left: 15px;
+  top: 5px;
+  z-index: 1;
+}
+.menuBtn:after {
+  content: '';
+  position: absolute;
+  left: -50%;
+  top: -50%;
+  z-index: -1;
+  border: 30px solid #fff;
+  border-radius: 50%;
+  height: 0;
+  width: 0;
+  -webkit-transition: all 150ms;
+  transition: all 150ms;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+.menuBtn > span {
+  background-color: #fff;
+  border-radius: 1px;
+  height: 2px;
+  width: 25px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -1px;
+  -webkit-transition: all 100ms;
+  transition: all 100ms;
+}
+.menuBtn > span:after,
+.menuBtn > span:before {
+  content: '';
+  background-color: #fff;
+  border-radius: 1px;
+  height: 2px;
+  width: 30px;
+  position: absolute;
+  left: 0;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+.menuBtn > span:after {
+  top: -7px;
+}
+.menuBtn > span:before {
+  bottom: -7px;
+}
+.menuBtn.act:after {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  opacity: 0;
+}
+.menuBtn.act > span {
+  height: 0;
+}
+.menuBtn.act > span:after,
+.menuBtn.act > span:before {
+  background-color: #fff;
+  top: 1px;
+}
+.menuBtn.act > span:after {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.menuBtn.act > span:before {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+/* main menu block */
+.mainMenu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  perspective: 800px;
+}
+.mainMenu ul {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.mainMenu.act li {
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+}
+.mainMenu li {
+  background-color: #272740;
+  text-align: left;
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: transform 500ms;
+  transition: transform 500ms;
+  -webkit-transform-origin: top left;
+  transform-origin: top left;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mainMenu li:nth-child(1) {
+  -webkit-transition-delay: 100ms;
+  transition-delay: 100ms;
+}
+.mainMenu li:nth-child(2) {
+  -webkit-transition-delay: 200ms;
+  transition-delay: 200ms;
+}
+.mainMenu li:nth-child(3) {
+  -webkit-transition-delay: 300ms;
+  transition-delay: 300ms;
+}
+.mainMenu li:nth-child(4) {
+  -webkit-transition-delay: 400ms;
+  transition-delay: 400ms;
+}
+.mainMenu li:nth-child(5) {
+  -webkit-transition-delay: 500ms;
+  transition-delay: 500ms;
+}
+.mainMenu li:nth-child(6) {
+  -webkit-transition-delay: 600ms;
+  transition-delay: 600ms;
+}
+.mainMenu li.cls {
+  height: 42px;
+  flex-grow: 0;
+}
+.mainMenu li.cls i {
+  font-size: 0;
+}
+.mainMenu li.act {
+  background-color: #604AD6;
+}
+.mainMenu a {
+  color: #fff;
+  display: block;
+  padding: 26px 0;
+  text-align: center;
+  width: 60px;
+}
+.mainMenu a i {
+  font-size: 22px;
+}
+.mainMenu a span {
+  display: none;
+}
+
+/******** MAIN MENU STYLES END *******/
+
+/* Others */
+* {
+  margin: 0;
+  padding: 0;
+}
+*, *:after, *:before {
+  -wekibit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+ol, ul {
+  list-style: none;
+}
+a {
+  color: #000;
+  text-decoration: none;
+}
+html, body {
+  height: 100vh;
+}
+html {
+  line-height: 1.2;
+}
 body {
-	font-family: "Helvetica neue", arial, sans-serif;
-	background: #333;
-	color: #fff;
-	text-align: center;
+  background-color: #D4EAEB;
+  color: #fff;
+  font-family: "Raleway", arial, sans-serif;
+  font-size: 16px;
+}
+h1 {
+  font: 50px 'Raleway', sans-serif;
+  margin: 50px auto 10px;
+}
+h1, h1 + p {
+  color: #404040;
+  text-align: center; 
+}
+.mainContainer {
+  margin: 50px auto 0;
+}
+.mainContainer {
+  color: #fff;
+  margin: 0 auto;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  z-index: 1;
+}
+.mainContainer.act {
+  height: 100vh;
+  overflow: hidden;
+}
+.wrap {
+  background: url('../img/bg.jpg') no-repeat;
+  background-size: cover;
+  overflow: auto;
+  position: relative;
+  min-height: 100vh;
+}
+header {
+  border-bottom: 1px solid #ffffff;
+  padding: 20px 15px;
+  text-align: center;
+  position: relative;
+}
+.logo {
+  color: #fff;
+  display: inline-block;
+  font-size: 20px;
+  letter-spacing: 2px;
+  line-height: 30px;
+  text-transform: uppercase;
+  vertical-align: top;
+}
+
+
+/* container */
+.contentBlock {
+  padding: 15px;
+}
+.contentBlock p {
+  font-size: 14px;
+  line-height: 1.4;
+  padding-top: 15px;
+}
+.contentBlock p:first-child {
+  padding-top: 0;
+}
+/* media queries */
+@media only screen and (min-width: 780px) {
+  html, body {
+    height: 100%;
+  }
+  body {
+    text-align: center;
+  }
+  body:after {
+    content: '';
+    width: 0;
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .wrap {
+    height: 100%;
+    min-height: 0;
+  }
+  .mainMenu {
+    position: absolute;
+  }
+  .mainContainer {
+    background: url('../img/bg_mobile.png') no-repeat;
+    background-size: 100% auto;
+    border-radius: 15px;
+    border: 0 solid #fff;
+    padding: 107px 25px 107px;
+    width: 370px;
+    min-height: 0;
+    height: 760px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .mainContainer.act {
+    height: 760px;    
+  }
+  .mainContainer.act .contentBlock {
+    height: 92%;
+    overflow: auto;
+  }
 }
